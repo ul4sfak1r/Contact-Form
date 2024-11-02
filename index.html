@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<title>Contact Form</title>
+	</head>
+	<body>
+		<!--
+			main?
+		-->
+		<div class="popup-div" id="popup-div">
+			<img src="icon-success-check.svg">
+			<h3>Message Sent!</h2>
+			<p>Thanks for completing the form. We'll be in touch soon!</p>
+		</div>
+		<div class="wrapper">
+			<h1>Contact Us</h1>
+			<form aria-label="Contact Form">
+				<fieldset>
+					<div class="input-div-wrapper">
+						<div class="margin-right input-div full-width" id="input-div">
+							<label for="name">First Name <span class="asteriks">*</span></label>
+							<input type="text" name="name" id="name" required>
+						</div>
+						<div class="input-div full-width mobile-vertical-layout" id="input-div">
+							<label for="surname">Last Name <span class="asteriks">*</span></label>						
+							<input type="text" name="surname" id="surname" required>	
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="full-width" id="email-div">
+						<label for="email">Email Address <span class="asteriks">*</span></label>
+						<input type="email" name="email" id="email" required >
+					</div>		
+				</fieldset>
+				<fieldset>
+					<legend>Query Type <span class="asteriks">*</span></legend>
+					<div class="input-div-wrapper mobile-vertical-layout" id="radio-wrapper">
+						<label for="general-enquiery" class="radio-div margin-right full-width">
+							<input type="radio" name="query-type" id="general-enquiery" required>
+							General Enquiery
+						</label>
+						<label for="support-request" class="radio-div full-width ">
+							<input type="radio" name="query-type" id="support-request">
+							Support Request
+						</label>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="full-width " id="input-div">
+						<label for="message">Message <span class="asteriks">*</span></label>
+						<textarea id="message" required></textarea>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="flex-row " id="checkbox-div">
+						<input type="checkbox" name="consent" id="consent" class="margin-right" required>
+						<label for="consent">I consent to being contacted by the team <span class="asteriks">*</span></label>		
+					</div>	
+				</fieldset>
+				<button>Submit</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

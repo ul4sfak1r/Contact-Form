@@ -1,0 +1,258 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Karla", sans-serif;
+}
+
+body {
+	background-color: hsl(148, 38%, 91%);
+    color: hsl(187, 24%, 22%);
+    height: 100vh;
+    display: flex;
+    	align-items: center;
+    	justify-content: center;
+}
+
+p {
+	margin-block: 0;
+	color: hsl(0, 66%, 54%);
+}
+
+.wrapper {
+	background-color: hsl(0, 0%, 100%);
+	max-width: 850px;
+	min-width: 700px;
+	padding: 0.1px 30px;
+	border-radius: 15px;
+}
+
+fieldset {
+	border: none;
+	display: flex;
+		flex-direction: column;
+	margin-top: 20px;
+	padding: 0;
+	gap: 10px;
+}
+
+.asteriks {
+	color: hsl(169, 82%, 27%);
+}
+
+fieldset > div {
+	display: flex;
+		flex-direction: column;
+	width: 50%;
+	padding: 0;
+	gap: 10px;
+}
+
+input:hover {
+	cursor: pointer;
+	border-color: hsl(169, 82%, 27%);
+}
+
+.input-div {
+	display: flex;
+		flex-direction: column;
+		gap: 10px;
+}
+
+.margin-right {
+	margin-right: 20px;
+}
+
+.full-width {
+	width: 100%;
+}
+
+input, textarea {
+	line-height: 35px;
+	border-radius: 5px;
+	border: 2px solid gray;
+	width: 100%;
+}
+
+input[type="text"], input[type="email"] {
+	padding-inline: 20px;
+	font-size: 0.9rem;
+}
+
+textarea {
+	padding-inline: 20px;
+	font-size: 1rem;
+	font-family: "Karla", sans-serif;
+}
+
+textarea:hover {
+	border-color: hsl(169, 82%, 27%);
+	cursor: pointer;
+}
+
+.input-div-wrapper {
+	display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	width: 100%;
+}
+
+.radio-div {
+	border: 2px solid hsl(186, 15%, 59%);
+	border-radius: 5px;
+	padding: 10px;
+	margin-top: 10px;
+	display: flex;
+		align-items: center;
+		gap: 10px;
+}
+
+.radio-div:hover {
+	cursor: pointer;
+}
+
+input[type="radio"] {
+    appearance: none; 
+    width: 16px;
+    height: 16px;
+    border: 2px solid hsl(186, 15%, 59%);
+    border-radius: 50%;
+    position: relative;
+}
+
+input[type="radio"]:checked {
+    border-color: hsl(169, 82%, 27%);
+}
+
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"] {
+    appearance: none; 
+    width: 1.2em;
+	height: 1.2em;
+    border: 2px solid hsl(186, 15%, 59%);
+    cursor: pointer;
+    border-radius: 0;
+    position: relative;
+}
+
+input[type="checkbox"]:hover {
+	border-color: hsl(169, 82%, 27%);
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✓'; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+input[type="checkbox"]:checked {
+    border-color: hsl(169, 82%, 27%);
+    background-color: hsl(169, 82%, 27%);
+}
+
+fieldset:last-of-type {
+	margin-block: 40px;
+}
+
+button {
+	width: 100%;
+	padding: 20px;
+	border-radius: 10px;
+	border: 0;
+	color: hsl(0, 0%, 100%);
+	background-color: hsl(169, 82%, 27%);
+	font-size: 1rem;
+	font-weight: 500;
+	letter-spacing: 1.75px;
+	margin-bottom: 20px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.error-red-border {
+	border: 2px solid hsl(0, 66%, 54%) !important;
+}
+
+.flex-row {
+	flex-direction: row;
+	width: 100%;
+}
+
+.change-background-color {
+	background-color:  hsl(148, 38%, 91%);
+}
+
+.change-border-color {
+	border-color: hsl(169, 82%, 27%);
+}
+
+/*Mobile Design*/
+
+@media (max-width: 768px) {
+	body {
+		height: unset;
+		margin-block: 2rem;
+		margin-inline: 1rem;
+	}
+
+	.wrapper {
+		min-width: unset;
+	}
+
+	.input-div-wrapper {
+		flex-direction: column;
+	}
+
+	textarea {
+		line-height: 70px;
+	}
+
+	input[type="checkbox"] {
+	    transform: scale(1); 
+	}
+}
+
+/*success pop up*/
+
+.popup-div {
+	padding: 30px;
+	position: fixed;
+		top: -500px;
+	transition: top 0.5s ease-in-out;
+	background-color: hsl(187, 24%, 22%);
+	color: white;
+	border-radius: 15px;
+}
+
+img {
+	float: left;
+	vertical-align: middle;
+}
+
+h3 {
+	margin-top: 0;
+	margin-left: 30px;
+}
+
+.popup-div > p {
+	color: hsl(186, 15%, 59%);
+}
