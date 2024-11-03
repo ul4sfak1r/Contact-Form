@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,12 +10,9 @@
 		<title>Contact Form</title>
 	</head>
 	<body>
-		<!--
-			main?
-		-->
 		<div class="popup-div" id="popup-div">
-			<img src="icon-success-check.svg">
-			<h3>Message Sent!</h2>
+			<img src="icon-success-check.svg" alt="success-icon">
+			<h3>Message Sent!</h3>
 			<p>Thanks for completing the form. We'll be in touch soon!</p>
 		</div>
 		<div class="wrapper">
@@ -43,11 +40,11 @@
 					<legend>Query Type <span class="asteriks">*</span></legend>
 					<div class="input-div-wrapper mobile-vertical-layout" id="radio-wrapper">
 						<label for="general-enquiery" class="radio-div margin-right full-width">
-							<input type="radio" name="query-type" id="general-enquiery" required>
+							<input type="radio" name="query-type" id="general-enquiery" value="general" required>
 							General Enquiery
 						</label>
 						<label for="support-request" class="radio-div full-width ">
-							<input type="radio" name="query-type" id="support-request">
+							<input type="radio" name="query-type" id="support-request" value="support" required>
 							Support Request
 						</label>
 					</div>
